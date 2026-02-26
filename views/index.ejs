@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowChat</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <body>
+    <div class="container">
+        <h3>All Chats</h3>
+        <form method="GET" action="/chats/new">
+            <button type="submit">New Chat</button> 
+        </form>
+        <br>
+        <% for(let c of chats) { %>
+            
+            <div class="chat">
+                <p><strong><%= c.from %></strong> ➜ <%= c.to %></p>
+                <div class="msg">
+                    <p><%= c.msg %></p>
+                    <br>
+                    <form method="GET" action="/chats/<%= c._id %>/edit">
+                        <button type="submit">Edit</button>
+                    </form>
+                    <form method="POST" action="/chats/<%= c._id %>?_method=DELETE">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+                
+                <p><%= c.createdAt.toString().split(" ")[4] %></p>
+                <p><%= c.createdAt.toString().split(" ").slice(0,4).join(" ") %></p>
+            </div>
+
+        <% } %>
+    </div>
+</body>
+</html>

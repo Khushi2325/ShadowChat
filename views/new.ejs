@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Chat</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="center-wrapper">
+    <div class="edit-card">
+
+        <h2>Write a New Chat</h2>
+
+        <form method="POST" action="/chats" class="vertical-form">
+
+            <input type="text" name="from" placeholder="Your Name" required>
+
+            <input type="text" name="to" placeholder="Receiver Name" required>
+
+            <textarea name="msg" rows="4" placeholder="Write your message..." required></textarea>
+
+            <button type="submit">Create Chat</button>
+
+        </form>
+
+        <a href="/chats" class="back-link">← Back to Chats</a>
+
+    </div>
+</div>
+
+</body>
+</html>
