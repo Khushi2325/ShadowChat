@@ -1,7 +1,6 @@
 # ShadowChat
 
-ShadowChat is a simple CRUD chat application built using Node.js, Express, MongoDB, and EJS.  
-It allows users to create, view, edit, and delete chat messages with a clean dark-themed interface.
+ShadowChat is a CRUD-based chat application designed to manage conversations efficiently. The project focuses on implementing RESTful routing, database operations, and a structured MVC approach with a clean user interface.
 
 ---
 
