@@ -23,6 +23,10 @@ main().then(() => {
 //chat will have => id, from, to, message, createdAt
 
 
+app.get("/", (req, res) => {
+    res.redirect("/chats");
+});
+
 app.get('/chats', async (req, res) => { //index route
     let chats = await Chat.find();
     console.log(chats);
